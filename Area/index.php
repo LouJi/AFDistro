@@ -1,6 +1,6 @@
 <?php
 $team='Bandera';
-$count= 1;
+$count= 1; // used for number addresss in display
 $server= "local";
 $username="user";
 $password="pw";
@@ -120,6 +120,7 @@ echo '
 								<header class="major">
 									<h2>'.$team.'</h2>
 								</header>';
+/* change Bandera to the team you need for the page*/
 $result = mysqli_query($connect, "select name, address, lesson, language, gmap, form from info where team = 'Bandera Rd'" ,MYSQLI_USE_RESULT);
 while ($row= mysqli_fetch_assoc($result)){
 	$name= $row['name'];
