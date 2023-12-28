@@ -2,9 +2,9 @@
 $Name= $_POST['rsvp-name'];
 $Address= $_POST['rsvp-address'];
 
-$server= "local";
-$username="user";
-$password="pw";
+$server= "localhost";
+$username="siteUser";
+$password="GiveM3@ccesS";
 $database = "AFDistro";
 
 /* Create database  connection with correct username and password*/
