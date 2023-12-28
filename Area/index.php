@@ -1,5 +1,5 @@
 <?php
-$team='Bandera';
+$team='team';
 $count= 1;
 $server= "localhost";
 $username="siteUser";
