@@ -1,10 +1,10 @@
 <?php
-$team='Bandera';
-$count= 1; // used for number addresss in display
-$server= "local";
-$username="user";
-$password="pw";
-$database = "AFDistro";
+$team='team';
+$count= 1;
+$server= "localhost";
+$username="siteUser";
+$password="password";
+$database = "database";
 
 /* Create database  connection with correct username and password*/
 
@@ -86,6 +86,22 @@ $KidsArray = array(
 	"9" => "9 - Journey Through the Sea",
 	"10" => "10 - A Kingdom of Gold",
 	"11" => "Graduated",
+	"12" => "Graduated",
+	"13" => "Graduated",
+	"14" => "Graduated",
+	"15" => "Graduated",
+	"16" => "Graduated",
+	"17" => "Graduated",
+	"18" => "Graduated",
+	"19" => "Graduated",
+	"20" => "Graduated",
+	"21" => "Graduated",
+	"22" => "Graduated",
+	"23" => "Graduated",
+	"24" => "Graduated",
+	"25" => "Graduated",
+	"26" => "Graduated",
+	"27" => "Graduated",
 	"28" => "Graduated");
 
 echo '
@@ -120,7 +136,6 @@ echo '
 								<header class="major">
 									<h2>'.$team.'</h2>
 								</header>';
-/* change Bandera to the team you need for the page*/
 $result = mysqli_query($connect, "select name, address, lesson, language, gmap, form from info where team = 'Bandera Rd'" ,MYSQLI_USE_RESULT);
 while ($row= mysqli_fetch_assoc($result)){
 	$name= $row['name'];
@@ -138,7 +153,7 @@ while ($row= mysqli_fetch_assoc($result)){
 	endif;
 	echo '
 	<p>'.$count.'. Name: '.$name.'<br> &nbsp;&nbsp;&nbsp; Address: '.$address.'<br> &nbsp;&nbsp;&nbsp; Lesson: '.$study.' 
-										<form method= "post" action="note.php"><input type="hidden" name="rsvp-name" id="rsvp-name" value="'.$name.'" /><input type="hidden" name="rsvp-address" id="rsvp-address" value="'.$address.'" /><input type="submit" value="Notes"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="'.$gmap.'" class="button medium">MAP</a>&nbsp;&nbsp;&nbsp;&nbsp;<br><br><a href="'.$form.'" class="button medium">Questionnaire</a></li>&nbsp;&nbsp;&nbsp;&nbsp;</form>
+										<form method= "post" action="note.php"><input type="hidden" name="rsvp-name" id="rsvp-name" value="'.$name.'" /><input type="hidden" name="rsvp-address" id="rsvp-address" value="'.$address.'" /><input type="submit" value="Notes"/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="'.$gmap.'" class="button medium">MAP</a>&nbsp;&nbsp;&nbsp;&nbsp;</form><form method= "post" action="Questionnaire.php"><input type="hidden" name="rsvp-name" id="rsvp-name" value="'.$name.'" /><input type="hidden" name="rsvp-address" id="rsvp-address" value="'.$address.'" /><input type="submit" value="Questionnaire"/></form>
 		';
 	$count++;
 }
